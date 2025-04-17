@@ -4,7 +4,7 @@
 	"files": {
 		"ignore": [],
 		"ignoreUnknown": true,
-		"include": ["./packages/**/*.ts", "./packages/**/*.tsx"]
+		"include": ["./**/*.ts", "./**/*.tsx"]
 	},
 	"javascript": {
 		"parser": {
