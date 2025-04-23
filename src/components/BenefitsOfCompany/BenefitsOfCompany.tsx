@@ -26,11 +26,11 @@ const dataCards = [
 	},
 ]
 
-const BenefitsOfCompany = () => {
+export const BenefitsOfCompany = () => {
 	return (
-		<div className='mb-[82px]'>
+		<div className=' mb-[100px] '>
 			<h3 className='m-auto w-[366px] pb-[36px] text-[24px]'>What makes our brand different</h3>
-			<div className='flex justify-between gap-[18px] '>
+			<div className='flex gap-[18px] '>
 				{dataCards.map((el) => (
 					<div
 						className='h-[244px] w-[305px] bg-[#bbbb] p-[48px] '
@@ -44,8 +44,4 @@ const BenefitsOfCompany = () => {
 			</div>
 		</div>
 	)
-}
-
-export const LogicModuleOfBenefitsOfCompany = () => {
-	return <BenefitsOfCompany />
 }

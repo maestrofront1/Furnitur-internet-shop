@@ -1,1 +1,1 @@
-export { BenefitsOfCompany } from './logicModuleOfBenefitsOfCompany'
+export { BenefitsOfCompany } from './BenefitsOfCompany'

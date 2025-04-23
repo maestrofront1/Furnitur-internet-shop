@@ -1,8 +1,10 @@
 import HeroImage from '../../assets/Hero_Blocks.jpg'
-import { LogicModuleOfBenefitsOfCompany } from '../../components/BenefitsOfCompany/logicModuleOfBenefitsOfCompany'
-import { CartItem } from '../../components/CartItem'
+import ImageBlock from '../../assets/ImageBlock.jpg'
+import { BenefitsOfCompany } from '../../components/BenefitsOfCompany'
+// import { ProductItem } from '../../components/CartItem'
 import { Footer } from '../../components/Footer'
 import { Header } from '../../components/Header'
+import { SignUpBlock } from '../../components/SignupBlock'
 
 export const Home = () => {
 	return (
@@ -27,11 +29,35 @@ export const Home = () => {
 					</button>
 				</div>
 			</div>
-			<div className=''>
-				<LogicModuleOfBenefitsOfCompany />
-				<CartItem />
-				<Footer />
+
+			<div className='mr-[80px] ml-[80px]'>
+				<BenefitsOfCompany />
+				{/*<ProductItem />*/}
+
+				<div className=' mb-[60px] flex gap-[16px]'>
+					<div className='w-[634px] bg-[#2A254B]'>
+						<div className=' pt-[64px] pr-[75px] pb-[205px] pl-[65px]'>
+							<h1 className='pb-[12px] text-[32px] text-stone-50'>It started with a small idea</h1>
+							<p className='text-left text-[18px] text-stone-50'>
+								A global brand with local beginnings, our story began in a small studio in South London in early 2014
+							</p>
+						</div>
+						<button
+							type='button'
+							className='ml-[65px] bg-[#4E4D93] p-[16px] text-stone-50'
+						>
+							View collection
+						</button>
+					</div>
+					<div className=''>
+						<img
+							alt={''}
+							src={ImageBlock}
+						/>
+					</div>
+				</div>
 			</div>
+			<SignUpBlock />
 			<Footer />
 		</div>
 	)

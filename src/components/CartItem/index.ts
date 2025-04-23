@@ -1,1 +1,1 @@
-export { CartItem } from './cart-item'
+export { ProductItem } from './product-item'
