@@ -1,10 +1,11 @@
-import HeroImage from '../../assets/Hero_Blocks.jpg'
-import ImageBlock from '../../assets/ImageBlock.jpg'
-import { BenefitsOfCompany } from '../../components/BenefitsOfCompany'
+import HeroImage from '/Hero_Blocks.jpg'
+import ImageBlock from '/ImageBlock.jpg'
+import { SignUpBlock } from '../../features/SignupBlock'
+import { ViewCollectionButton } from '../../shared/view-collection-button/view-collection-button'
+import { BenefitsOfCompany } from '../../widgets/BenefitsOfCompany'
 // import { ProductItem } from '../../components/CartItem'
-import { Footer } from '../../components/Footer'
-import { Header } from '../../components/Header'
-import { SignUpBlock } from '../../components/SignupBlock'
+import { Footer } from '../../widgets/Footer'
+import { Header } from '../../widgets/Header'
 
 export const Home = () => {
 	return (
@@ -21,12 +22,7 @@ export const Home = () => {
 						<h1 className='pb-[20px] text-[32px]'>Luxury homeware for people who love timeless design quality</h1>
 						<span className=' text-[18px]'>Shop the new Spring 2022 collection today</span>
 					</div>
-					<button
-						type='button'
-						className=' h-[56px] w-[170px] bg-[#F9F9F9]'
-					>
-						View collection
-					</button>
+					<ViewCollectionButton />
 				</div>
 			</div>
 
@@ -42,12 +38,7 @@ export const Home = () => {
 								A global brand with local beginnings, our story began in a small studio in South London in early 2014
 							</p>
 						</div>
-						<button
-							type='button'
-							className='ml-[65px] bg-[#4E4D93] p-[16px] text-stone-50'
-						>
-							View collection
-						</button>
+						<ViewCollectionButton />
 					</div>
 					<div className=''>
 						<img

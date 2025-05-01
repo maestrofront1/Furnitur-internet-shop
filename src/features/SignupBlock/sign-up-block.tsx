@@ -4,7 +4,7 @@ const options = ['Exclusive offers', 'Free events', 'Large discounts']
 
 export const SignUpBlock = () => {
 	return (
-		<div className=" bg-[url('/public/SignupBack.jpg')] ">
+		<div className=" bg-[url('/SignupBack.jpg')] ">
 			<div className='pt-[90px] pr-[473px] pl-[473px]'>
 				<h1 className='pb-[12px] text-[32px] text-stone-50'>Join the club and get the benefits</h1>
 				<p className='pb-[54px] text-center text-[18px] text-stone-50'>
@@ -24,9 +24,9 @@ export const SignUpBlock = () => {
 				</div>
 				<div className='mt-[40px] flex items-center pb-[36px]'>
 					<input
-						className='h-[56px] w-[354px] bg-stone-50 pr-[205px] text-center'
+						className='h-[56px] w-[354px] bg-stone-50 text-center outline-none'
 						placeholder='your@email.com'
-						type='text'
+						type='email'
 					/>
 					<button
 						type='button'
