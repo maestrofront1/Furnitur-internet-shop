@@ -1,1 +1,1 @@
-export { SignUpButton } from './sign-up-button'
+export { SignUp } from './sign-up'

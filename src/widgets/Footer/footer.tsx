@@ -1,3 +1,5 @@
+import { SignUp } from '../../shared/sign-up-button'
+
 const MenuOptions = ['New arrivals', 'Best sellers', 'Recently viewed', 'Popular this week', 'All products']
 const CategoriesOptions = ['Crockery', 'Furniture', 'Homeware', 'Plant pots', 'Chairs', 'Crockery']
 const OurCompanyOptions = ['About us', 'Vacancies', 'Contact us', 'Privacy', 'Returns policy']
@@ -53,6 +55,10 @@ export const Footer = () => {
 							</button>
 						</li>
 					))}
+				</div>
+				<div>
+					<h1 className='pb-[12px]'>Join our mailing list</h1>
+					<SignUp styles={{ backgroundColor: 'white', color: 'black', background: '#4E4D93', width: '500px' }} />
 				</div>
 			</div>
 		</div>
