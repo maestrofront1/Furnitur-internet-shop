@@ -16,7 +16,7 @@ export const SignUpBlock = () => {
 					<div className='flex items-center justify-center gap-[36px]'>
 						{options.map((el) => (
 							<div
-								key={JSON.stringify(el)}
+								key={Math.random()}
 								className='flex items-center gap-[4px] text-stone-50'
 							>
 								<CiCircleCheck className='' />

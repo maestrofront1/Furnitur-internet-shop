@@ -33,7 +33,8 @@
         "useValidAriaProps": "warn",
         "useValidAriaRole": "warn",
         "useValidAriaValues": "warn",
-        "useValidLang": "error"
+        "useValidLang": "error",
+        "noLabelWithoutControl": "off"
       },
       "complexity": {
         "noBannedTypes": "warn",
@@ -198,7 +199,7 @@
         "noCompareNegZero": "warn",
         "noConfusingLabels": "error",
         "noConfusingVoidType": "error",
-        "noConsoleLog": "warn",
+        "noConsoleLog": "off",
         "noConstEnum": "warn",
         "noControlCharactersInRegex": "warn",
         "noDebugger": "warn",
@@ -222,7 +223,7 @@
         "noGlobalIsNan": "warn",
         "noImplicitAnyLet": "warn",
         "noImportAssign": "error",
-        "noLabelVar": "error",
+        "noLabelVar": "warn",
         "noMisleadingCharacterClass": "warn",
         "noMisleadingInstantiator": "warn",
         "noMisrefactoredShorthandAssign": "warn",

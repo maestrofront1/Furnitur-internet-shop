@@ -1,1 +1,1 @@
-export { AutotificationModal } from './autotification-modal'
+export { AuthenticationModal } from './autotification-modal'

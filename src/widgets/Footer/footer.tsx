@@ -13,7 +13,7 @@ export const Footer = () => {
 					{MenuOptions.map((el) => (
 						<li
 							className='list-none'
-							key={JSON.stringify(el)}
+							key={Math.random()}
 						>
 							<button
 								type='button'
@@ -29,7 +29,7 @@ export const Footer = () => {
 					{CategoriesOptions.map((el) => (
 						<li
 							className='list-none'
-							key={JSON.stringify(el)}
+							key={Math.random()}
 						>
 							<button
 								type='button'
@@ -45,7 +45,7 @@ export const Footer = () => {
 					{OurCompanyOptions.map((el) => (
 						<li
 							className='list-none'
-							key={JSON.stringify(el)}
+							key={Math.random()}
 						>
 							<button
 								type='button'
