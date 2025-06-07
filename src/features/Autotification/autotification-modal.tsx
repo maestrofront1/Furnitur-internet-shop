@@ -1,8 +1,25 @@
 import { useForm } from 'react-hook-form'
-// @ts-ignore
-export const AuthenticationModal = ({ isOpen, onClose }) => {
-	const { register, handleSubmit } = useForm()
-	const onSubmit = (data: any) => console.log(data)
+
+interface IFormInput {
+	name: string
+	email: string
+	password: string
+	password_confirmation: string
+}
+
+interface IProps {
+	isOpen: boolean
+	onClose: () => void
+}
+
+export const AuthenticationModal = ({ isOpen, onClose }: IProps) => {
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm<IFormInput>()
+
+	const onSubmit = (data: IFormInput) => console.log(data)
 
 	if (!isOpen) {
 		return null
@@ -16,29 +33,56 @@ export const AuthenticationModal = ({ isOpen, onClose }) => {
 		>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<div className='flex flex-col items-center justify-center'>
-					<div className=' pt-35'>
-						<label>Ведите свой никнейм</label>
-						<input
-							{...register('name', { required: true })}
-							className='mb-2.5 ml-2.5 w-70 rounded-md bg-stone-50'
-						/>
-						<label>Ведите свою почту</label>
-						<input
-							{...register('email', { required: true })}
-							className='mb-2.5 ml-2.5 w-70 rounded-md bg-stone-50'
-						/>
-						<label>Ведите свой пароль</label>
-						<input
-							{...register('password', { required: true })}
-							className='mb-2.5 ml-2.5 w-70 rounded-md bg-stone-50'
-						/>
-						<label>Повторите свой пароль</label>
-						<input
-							{...register('password_confirmation', { required: true })}
-							className='mb-2.5 ml-2.5 w-70 rounded-md bg-stone-50'
-						/>
+					<h1 className='pt-5'>Регистрация</h1>
+					<div className=' pt-5'>
+						<div className='flex flex-col justify-start pl-2'>
+							<label>Введите свой никнейм</label>
+							<input
+								{...register('name', { required: true, maxLength: 20, pattern: /^[A-Za-z]+$/i })}
+								className='mb-2.5 w-70 rounded-md bg-stone-50'
+							/>
+							{errors?.name?.type === 'required' && <p className='text-red-400'>Это поле пустое</p>}
+							{errors?.name?.type === 'maxLength' && (
+								<p className='text-red-400'>Имя не должно превышать 20 символов</p>
+							)}
+						</div>
+						<div className='flex flex-col justify-start pl-2'>
+							<label>Введите свою почту</label>
+							<input
+								{...register('email', { required: true })}
+								className='mb-2.5 w-70 rounded-md bg-stone-50'
+							/>
+							{errors?.email?.type === 'required' && <p className='text-red-400'>Это поле пустое</p>}
+						</div>
+						<div className='flex flex-col justify-start pl-2'>
+							<label>Введите свой пароль</label>
+							<input
+								{...register('password', { required: true, minLength: 6, maxLength: 20 })}
+								className='mb-2.5 w-70 rounded-md bg-stone-50'
+							/>
+							{errors?.password?.type === 'required' && <p className='text-red-400'>Это поле пустое</p>}
+							{errors?.password?.type === 'minLength' && (
+								<p className='text-red-400'>Пароль должен быть не менее 6 символов</p>
+							)}
+							{errors?.password?.type === 'maxLength' && (
+								<p className='text-red-400'>Пароль должен быть не более 20 символов</p>
+							)}
+						</div>
+						<div className='flex flex-col justify-start pl-2'>
+							<label>Повторите свой пароль</label>
+							<input
+								{...register('password_confirmation', { required: true })}
+								className='mb-2.5 w-70 rounded-md bg-stone-50'
+							/>
+							{errors?.password_confirmation?.type === 'required' && <p className='text-red-400'>Это поле пустое</p>}
+						</div>
 					</div>
-					<input type='submit' />
+					<button
+						className='pt-5'
+						type='submit'
+					>
+						Зарегистрироваться
+					</button>
 				</div>
 			</form>
 		</div>
